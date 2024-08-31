@@ -7,7 +7,7 @@ export interface FoodProps {
   brand: string;
 }
 
-export function FoodItem({ item }: { item: FoodProps }) {
+export function FoodListItem({ item }: { item: FoodProps }) {
   return (
     <View className="bg-gray-300 p-[10px] rounded-md flex-row justify-between items-center">
       <View className="flex-1 gap-1">
