@@ -1,6 +1,7 @@
-import "@/styles/global.css";
+import "../styles/global.css";
 import { FoodListItem } from "../components/FoodListItem";
-import { FlatList, View } from "react-native";
+import { FlatList, SafeAreaView, View } from "react-native";
+import { InputSearch } from "../components/InputSearch";
 
 const foodList = [
   { label: "Pizza", cal: 100, brand: "Dominos" },
@@ -10,13 +11,13 @@ const foodList = [
 
 export default function Index() {
   return (
-    <View className="flex-1 p-[10px]">
+    <SafeAreaView className="flex-1 p-[10px] gap-3 mx-3">
+      <InputSearch />
       <FlatList
         data={foodList}
         renderItem={({ item }) => <FoodListItem item={item} />}
-        className="mt-16"
         contentContainerStyle={{ gap: 5 }}
       />
-    </View>
+    </SafeAreaView>
   );
 }
