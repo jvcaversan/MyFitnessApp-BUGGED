@@ -1,6 +1,5 @@
-import "../styles/global.css";
-import { FoodListItem } from "../components/FoodListItem";
 import { FlatList, SafeAreaView, View } from "react-native";
+import { FoodListItem } from "../components/FoodListItem";
 import { InputSearch } from "../components/InputSearch";
 
 const foodList = [
