@@ -1,0 +1,47 @@
+{
+    "restaurants": [
+      { 
+        "id": "1",
+        "label": "Frango",
+        "brand": "KFC", 
+        "cal": 50
+      },
+      { 
+        "id": "2",
+        "label": "BigMac",
+        "brand": "McDonald's", 
+        "cal": 100
+      },
+      { 
+        "id": "3",
+        "label": "Costela",
+        "brand": "Outback", 
+        "cal": 70
+      },
+      { 
+        "id": "4",
+        "label": "Temaki",
+        "brand": "Sushi Dev", 
+        "cal": 120
+      },
+      { 
+        "id": "5",
+        "label": "Hamburguer",
+        "brand": "Burguer Grill", 
+        "cal": 150
+      },
+      { 
+        "id": "6",
+        "label": "Churrasco",
+        "brand": "Marmitas express", 
+        "cal": 180
+      },
+      { 
+        "id": "7",
+        "label": "Coxinha",
+        "brand": "Pista Alegre", 
+        "cal": 180
+      }
+    ]
+    
+  }

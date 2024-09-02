@@ -1,13 +1,12 @@
 import { View, Text } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { FoodProps } from "@/store/store";
 
-export interface FoodProps {
-  label: string;
-  cal: number;
-  brand: string;
+interface FoodListItemProps {
+  item: FoodProps;
 }
 
-export function FoodListItem({ item }: { item: FoodProps }) {
+export function FoodListItem({ item }: FoodListItemProps) {
   return (
     <View className="bg-gray-200 p-[10px] rounded-md flex-row justify-between items-center">
       <View className="flex-1 gap-1">

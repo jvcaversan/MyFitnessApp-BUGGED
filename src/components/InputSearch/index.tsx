@@ -1,9 +1,11 @@
-import { View, Text, TextInput } from "react-native";
-import React, { useState } from "react";
+// InputSearch.js
+import { View, TextInput } from "react-native";
+import React from "react";
 import { Ionicons, Feather } from "@expo/vector-icons";
+import useStore from "@/store/store";
 
 export function InputSearch() {
-  const [search, setSearch] = useState("");
+  const { search, setSearch } = useStore(); // Use o store para gerenciar o estado de busca
 
   return (
     <View className="flex-row items-center rounded-full bg-gray-100 p-2">
@@ -13,7 +15,7 @@ export function InputSearch() {
         color="royalblue"
         onPress={() => {
           console.warn(" CLICADO", search);
-          setSearch("");
+          setSearch(""); // Limpa o campo de busca
         }}
         className="ml-2"
       />
@@ -22,10 +24,7 @@ export function InputSearch() {
         placeholder="Buscar"
         placeholderTextColor="gray"
         value={search}
-        onChangeText={(text) => {
-          setSearch(text);
-          console.log(text);
-        }}
+        onChangeText={(text) => setSearch(text)} // Atualiza o texto de busca no store
         style={{ paddingLeft: 10 }}
       />
       <Feather
@@ -33,7 +32,7 @@ export function InputSearch() {
         size={16}
         color="gray"
         className="mr-2"
-        onPress={() => setSearch("")}
+        onPress={() => setSearch("")} // Limpa o campo de busca
       />
     </View>
   );
